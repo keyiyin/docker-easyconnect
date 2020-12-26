@@ -47,6 +47,11 @@ rm /usr/share/sangfor/EasyConnect/resources/conf/setting_root.json
 [ -e ~/setting_root.json ] || echo '' > ~/setting_root.json
 ln -s ~/setting_root.json /usr/share/sangfor/EasyConnect/resources/conf/setting_root.json
 
+# SSO 持久化处理
+rm /usr/share/sangfor/EasyConnect/resources/conf/setting_root.json
+[ -e ~/setting_root.json ] || echo '' > ~/setting_root.json
+ln -s ~/setting_root.json /usr/share/sangfor/EasyConnect/resources/conf/setting_root.json
+
 export DISPLAY
 
 iptables -t nat -A POSTROUTING -o tun0 -j MASQUERADE
